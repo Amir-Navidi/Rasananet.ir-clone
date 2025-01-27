@@ -1,0 +1,230 @@
+@font-face {
+    font-family: "IRANsans";
+    src: url(../fonts/IRANSansWeb\(FaNum\).ttf),
+        url(../fonts/IRANSansWeb\(FaNum\).woff),
+        url(../fonts/IRANSansWeb\(FaNum\)\ \(2\).eot);
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #d5d5d538;
+    height: 100vh;
+    direction: rtl;
+    font-family: "IRANsans";
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+}
+
+.form {
+    width: 33%;
+    height: max-content;
+    background-color: white;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px 0 rgb(31 32 35 / 7%);
+    padding: 25px;
+}
+
+.logo {
+    width: 30%;
+}
+
+.title {
+    font-weight: 500;
+    margin-top: 20px;
+}
+
+input {
+    width: 100%;
+    margin-top: 15px;
+    border-radius: 5px;
+    border: 1px solid #777;
+    position: relative;
+}
+
+.form-control {
+    border: 2px solid #80868a;
+}
+
+.form-control:focus {
+    box-shadow: none !important;
+    border: 2px solid #ffc107;
+}
+
+input+label {
+    transition: all .45s !important;
+}
+
+.form-floating input:focus+label,
+.form-floating input:not(:placeholder-shown)+label {
+    color: #ffc107 !important;
+    transform: translateY(-1.45rem) scale(0.85) translateX(1rem) !important;
+}
+
+label {
+    color: #adb5bd;
+    font-weight: 600;
+    margin-right: 10px;
+    max-height: 75%;
+    width: max-content;
+    position: absolute;
+    right: 0;
+    transition: all .16s ease-in !important;
+}
+
+/* Hide the spinner buttons */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+button[type="submit"] {
+    width: 100%;
+    color: white;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: #bc071d;
+    border-radius: 15px;
+    margin-top: 20px;
+    min-height: 45px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border: 2px solid #bc071d;
+    transition: all .3s;
+}
+
+button[type="submit"]:hover {
+    background-color: white;
+    color: #bc071d;
+}
+
+/* remove validation icons */
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+    background-image: none !important;
+    border: 2px solid #bc071d !important;
+}
+
+.eye {
+    width: 5%;
+    height: 58px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+i {
+    cursor: pointer;
+    color: rgba(0, 0, 0, .55);
+}
+
+.form-check {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.form-check input {
+    margin-top: 10px;
+    border: 1px solid rgba(0, 0, 0, .25) !important;
+    box-shadow: none !important;
+}
+
+.form-check input:checked {
+    box-shadow: none !important;
+    background-color: #bc071d !important;
+    border: none;
+}
+
+.form-check label {
+    margin-top: 10px;
+    margin-right: 1.5rem;
+    color: rgba(0, 0, 0, .6) !important;
+}
+
+.forgot-pswd {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.sign-up {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.forgot-pswd a,
+.sign-up a {
+    text-decoration: none;
+    color: #bc071d;
+    transition: .35s;
+    font-weight: bold;
+}
+
+.forgot-pswd a:hover,
+.sign-up a:hover {
+    color: #f6a31d;
+}
+
+.login-img {
+    width: 45%;
+    height: 40vh;
+    position: relative;
+}
+
+.login-img img {
+    width: 100%;
+    position: absolute;
+    top: -5rem;
+}
+
+
+@media screen and (max-width: 1200px) {
+    .login-img img {
+        aspect-ratio: 3/4;
+    }
+}
+
+@media screen and (max-width: 995px) {
+    .login-img {
+        display: none;
+    }
+
+    .form {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .logo {
+        width: 40%;
+    }
+
+    .form {
+        width: 100%;
+    }
+}
